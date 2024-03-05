@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="Notes.AppShell"
+    x:Class="Notes.AppShell" 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Notes"
     Shell.FlyoutBehavior="Disabled"
     Title="Notes">
 
+    <TabBar>
     <ShellContent
-        Title="Home"
+        Title="Notes"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="Link"
+        ContentTemplate="{DataTemplate local:AboutPage}"
+        Route="AboutPage" />
+
+        <ShellContent
+        Title="Mensagem"
+        ContentTemplate="{DataTemplate local:Mensagem}"
+        Route="Mensagem" />
+
+        <ShellContent
+        Title="NotePage"
+        ContentTemplate="{DataTemplate local:NotePage}"
+        Route="NotePage" />
+    </TabBar>
 </Shell>
